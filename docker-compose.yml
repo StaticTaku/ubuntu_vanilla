@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  vanilla:
+    image: image_vanilla
+    container_name: container_vanilla
+    volumes:
+      - ./ubuntu_vanilla:/home/${DOCKER_USER}/
+    build:
+      context: ./ubuntu_vanilla
+      dockerfile: ./Dockerfile
+      args:
+        - DOCKER_USER=${DOCKER_USER}
+        - DOCKER_UID=${DOCKER_UID}
+        - DOCKER_GID=${DOCKER_GID}
+        - DOCKER_GROUPNAME=${DOCKER_GROUPNAME}
+        - DOCKER_PASS=${DOCKER_PASS}
+    stdin_open: true
+    tty: true

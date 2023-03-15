@@ -1,4 +1,4 @@
-# docker image for ubuntu with user/group
+# docker for ubuntu with user/group
 
 ## Instalation
 ```sh
@@ -6,7 +6,7 @@ git clone https://github.com/StaticTaku/ubuntu_vanilla.git
 ```
 
 ## Setup
-set username, groupname, uid, gid and temporary pass in the container.
+Set username, groupname, uid, gid and temporary pass in the container.  
 In .env file, ex.
 ```sh
     DOCKER_USER=statictaku
@@ -15,7 +15,7 @@ In .env file, ex.
     DOCKER_GID=1000
     DOCKER_PASS=DummyPass
 ```
-
+Then, 
 ```sh
     docker-compose up -d && \ #make image, create container from the image, then start container.
     docker-compose exec -it vanilla bash #get into the container.

@@ -6,7 +6,7 @@ git clone https://github.com/StaticTaku/ubuntu_vanilla.git
 ```
 
 ## Setup
-change DOCKER_USER, DOCKER_GROUPNAME, DOCKER_UID, DOCKER_GID, DOCKER_PASS in .env file. 
+set username, groupname, uid, gid and temporary pass in the container.
 In .env file, ex.
 ```sh
     DOCKER_USER=statictaku
@@ -17,8 +17,8 @@ In .env file, ex.
 ```
 
 ```sh
-    docker-compose up -d && \ #make image, create container from the image, then start container
-    docker-compose exec -it vanilla bash #get into the container
+    docker-compose up -d && \ #make image, create container from the image, then start container.
+    docker-compose exec -it vanilla bash #get into the container.
 ```
 
 In the container, you should do passwd to change the password in the container because of some security reasons.
